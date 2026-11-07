@@ -1,0 +1,1252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
+
+<title>Kam's Barber Shop — Walworth, London</title>
+<meta name="description" content="A modern urban barber shop concept for Kam's Barber Shop in Walworth, London.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #111111;
+  --dark: #191919;
+  --white: #f4f2ee;
+  --red: #ed302b;
+  --grey: #929292;
+  --line: #343434;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  width: min(1240px, 90%);
+  margin: auto;
+}
+
+.condensed {
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.red {
+  color: var(--red);
+}
+
+.demo-notice {
+  background: var(--red);
+  color: white;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* HEADER */
+
+header {
+  background: var(--black);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 20;
+}
+
+.navbar {
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-mark {
+  width: 43px;
+  height: 43px;
+  background: var(--red);
+  display: grid;
+  place-items: center;
+  color: white;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.logo-text strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 23px;
+  line-height: 1;
+  letter-spacing: .5px;
+}
+
+.logo-text span {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--grey);
+  margin-top: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+}
+
+.nav-links a {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color .2s;
+}
+
+.nav-links a:hover {
+  color: var(--red);
+}
+
+.nav-links .nav-cta {
+  background: var(--red);
+  color: white;
+  padding: 14px 21px;
+}
+
+.menu-toggle {
+  display: none;
+  color: white;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 690px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.93) 0%, rgba(0,0,0,.72) 48%, rgba(0,0,0,.2) 100%),
+    url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=2000&q=90") center 45%/cover;
+}
+
+.hero::after {
+  content: "K";
+  position: absolute;
+  right: 4%;
+  bottom: -160px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 600px;
+  line-height: 1;
+  color: rgba(255,255,255,.035);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 100px 0;
+  max-width: 850px;
+}
+
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero-label::before {
+  content: "";
+  width: 35px;
+  height: 3px;
+  background: var(--red);
+}
+
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(90px, 15vw, 185px);
+  font-weight: 900;
+  line-height: .78;
+  letter-spacing: -5px;
+  text-transform: uppercase;
+  margin: 35px 0;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--red);
+}
+
+.hero-description {
+  max-width: 420px;
+  color: #c2c2c2;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 27px;
+  background: var(--red);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  transition: .25s;
+}
+
+.btn:hover {
+  background: white;
+  color: var(--black);
+  transform: translateY(-3px);
+}
+
+.hero-secondary {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  padding-bottom: 6px;
+}
+
+/* TICKER */
+
+.ticker {
+  background: var(--red);
+  color: white;
+  overflow: hidden;
+  padding: 17px 0;
+}
+
+.ticker-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.ticker span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* INTRO */
+
+.intro {
+  padding: 125px 0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.intro-image {
+  position: relative;
+}
+
+.intro-image img {
+  height: 550px;
+  filter: grayscale(100%);
+}
+
+.image-tag {
+  position: absolute;
+  right: -20px;
+  bottom: 30px;
+  background: var(--red);
+  padding: 17px 23px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.section-number {
+  color: var(--red);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.intro-copy h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(55px, 7vw, 90px);
+  font-weight: 900;
+  line-height: .9;
+  text-transform: uppercase;
+  margin: 25px 0;
+}
+
+.intro-copy h2 span {
+  color: var(--red);
+}
+
+.intro-copy p {
+  color: #a9a9a9;
+  font-size: 14px;
+  line-height: 2;
+  max-width: 470px;
+  margin-bottom: 18px;
+}
+
+.small-line {
+  width: 55px;
+  height: 4px;
+  background: var(--red);
+  margin: 30px 0;
+}
+
+/* SERVICES */
+
+.services {
+  background: var(--white);
+  color: var(--black);
+  padding: 110px 0;
+}
+
+.services-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 55px;
+}
+
+.services-heading h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(60px, 9vw, 105px);
+  font-weight: 900;
+  line-height: .85;
+  text-transform: uppercase;
+}
+
+.services-heading p {
+  max-width: 260px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.service-list {
+  border-top: 2px solid var(--black);
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 75px 1fr 50px;
+  align-items: center;
+  gap: 25px;
+  padding: 30px 10px;
+  border-bottom: 1px solid #ccc;
+  transition: .2s;
+}
+
+.service-item:hover {
+  background: #e8e5df;
+  padding-left: 20px;
+}
+
+.service-item .number {
+  color: var(--red);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.service-item h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.service-item p {
+  color: #777;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.service-arrow {
+  font-size: 28px;
+  text-align: right;
+}
+
+/* STATEMENT */
+
+.statement {
+  padding: 105px 0;
+  text-align: center;
+  background: var(--red);
+  color: white;
+}
+
+.statement span {
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: 800;
+}
+
+.statement h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(55px, 10vw, 120px);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: .9;
+  margin: 25px 0;
+}
+
+.statement p {
+  color: rgba(255,255,255,.8);
+  font-size: 13px;
+}
+
+/* GALLERY */
+
+.gallery {
+  padding: 110px 0;
+}
+
+.gallery-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 45px;
+}
+
+.gallery-heading h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(60px, 9vw, 100px);
+  font-weight: 900;
+  line-height: .85;
+  text-transform: uppercase;
+}
+
+.gallery-heading p {
+  max-width: 240px;
+  color: var(--grey);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  grid-template-rows: 260px 260px;
+  gap: 15px;
+}
+
+.gallery-grid img {
+  height: 100%;
+  filter: grayscale(100%);
+  transition: filter .35s;
+}
+
+.gallery-grid img:hover {
+  filter: grayscale(0%);
+}
+
+.gallery-grid img:first-child {
+  grid-row: 1 / 3;
+}
+
+.gallery-note {
+  color: var(--grey);
+  font-size: 10px;
+  margin-top: 17px;
+}
+
+/* VALUES */
+
+.values {
+  background: var(--dark);
+  padding: 85px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.value-item {
+  border-left: 3px solid var(--red);
+  padding-left: 22px;
+}
+
+.value-item span {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: var(--red);
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.value-item h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 27px;
+  text-transform: uppercase;
+  margin: 8px 0;
+}
+
+.value-item p {
+  color: var(--grey);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* CONTACT */
+
+.visit {
+  padding: 115px 0;
+}
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.visit-copy h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(65px, 9vw, 105px);
+  line-height: .85;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 25px 0;
+}
+
+.visit-copy h2 span {
+  color: var(--red);
+}
+
+.visit-copy > p {
+  color: #aaa;
+  max-width: 400px;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.contact-list {
+  display: grid;
+  gap: 24px;
+  margin: 35px 0;
+}
+
+.contact-row {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+
+.contact-icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: var(--red);
+  font-size: 18px;
+}
+
+.contact-row strong {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.contact-row p,
+.contact-row a {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.map-card {
+  min-height: 440px;
+  background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url("https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=85") center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-link {
+  display: block;
+  background: var(--red);
+  padding: 24px 30px;
+  text-align: center;
+  transition: .2s;
+}
+
+.map-link:hover {
+  background: white;
+  color: var(--black);
+}
+
+.map-link strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 27px;
+  text-transform: uppercase;
+}
+
+.map-link span {
+  display: block;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #090909;
+  border-top: 1px solid var(--line);
+  padding: 55px 0 25px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 45px;
+}
+
+.footer-brand h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.footer-brand p {
+  color: var(--grey);
+  font-size: 11px;
+  margin-top: 7px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-links a {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.footer-links a:hover {
+  color: var(--red);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 9px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .nav-links {
+    gap: 16px;
+  }
+
+  .intro-grid {
+    gap: 45px;
+  }
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero h1 {
+    font-size: clamp(85px, 16vw, 140px);
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    height: 75px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: var(--black);
+    padding: 25px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 610px;
+    background-position: 60% center;
+  }
+
+  .hero-content {
+    padding: 75px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(80px, 19vw, 120px);
+    letter-spacing: -3px;
+  }
+
+  .ticker-inner {
+    justify-content: center;
+    gap: 13px 25px;
+  }
+
+  .ticker span {
+    font-size: 17px;
+  }
+
+  .intro,
+  .gallery,
+  .visit {
+    padding: 80px 0;
+  }
+
+  .intro-grid,
+  .visit-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .intro-image img {
+    height: 400px;
+  }
+
+  .image-tag {
+    right: 0;
+  }
+
+  .services {
+    padding: 80px 0;
+  }
+
+  .services-heading,
+  .gallery-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .service-item {
+    grid-template-columns: 40px 1fr 25px;
+    gap: 12px;
+    padding: 24px 4px;
+  }
+
+  .service-item h3 {
+    font-size: 27px;
+  }
+
+  .service-item p {
+    font-size: 11px;
+  }
+
+  .statement {
+    padding: 75px 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px 190px;
+    gap: 10px;
+  }
+
+  .gallery-grid img:first-child {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .values {
+    padding: 70px 0;
+  }
+
+  .map-card {
+    min-height: 320px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero h1 {
+    font-size: 75px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .gallery-grid {
+    grid-template-rows: 220px 165px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="demo-notice">
+  Portfolio concept · Created by Hewerone Studio · Not the official website
+</div>
+
+<header>
+  <div class="container navbar">
+
+    <a href="#home" class="logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-text">
+        <strong>KAM'S BARBER</strong>
+        <span>WALWORTH · LONDON</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Find us</a>
+      <a href="#visit" class="nav-cta">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-content">
+
+    <div class="hero-label">Walworth · London · Est. Local Barbering</div>
+
+    <h1>
+      Sharp<br>
+      <span>Looks.</span><br>
+      Real Style.
+    </h1>
+
+    <p class="hero-description">
+      A neighbourhood barber shop with a straightforward approach:
+      good cuts, attention to detail and no unnecessary fuss.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#visit" class="btn">Find the shop ↗</a>
+      <a href="#services" class="hero-secondary">Explore services</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- TICKER -->
+<section class="ticker">
+  <div class="container ticker-inner">
+    <span>Good cuts</span>
+    <span>✳</span>
+    <span>Good people</span>
+    <span>✳</span>
+    <span>Real style</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="intro" id="about">
+  <div class="container intro-grid">
+
+    <div class="intro-image">
+      <img
+        src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1100&q=90"
+        alt="Barber giving a haircut"
+      >
+      <div class="image-tag">The craft matters.</div>
+    </div>
+
+    <div class="intro-copy">
+      <span class="section-number">01 / THE SHOP</span>
+
+      <h2>
+        Not just<br>
+        a haircut.<br>
+        <span>A feeling.</span>
+      </h2>
+
+      <div class="small-line"></div>
+
+      <p>
+        A proper neighbourhood barbershop is about more than
+        what's happening in the chair. It's about the people,
+        the atmosphere and the confidence that comes with
+        a fresh cut.
+      </p>
+
+      <p>
+        Kam's Barber Shop is located on East Street in Walworth,
+        bringing classic barbering into the everyday life
+        of the local community.
+      </p>
+
+      <a href="#visit" class="btn">Come say hello ↗</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+
+    <div class="services-heading">
+      <div>
+        <span class="section-number">02 / WHAT WE DO</span>
+        <h2>THE<br>LINE-UP.</h2>
+      </div>
+
+      <p>
+        The classic barbering essentials.
+        Contact the shop to confirm available treatments
+        and current prices.
+      </p>
+    </div>
+
+    <div class="service-list">
+
+      <div class="service-item">
+        <span class="number">01</span>
+        <div>
+          <h3>Haircuts</h3>
+          <p>Classic cuts, modern styles and clean finishes.</p>
+        </div>
+        <span class="service-arrow">↗</span>
+      </div>
+
+      <div class="service-item">
+        <span class="number">02</span>
+        <div>
+          <h3>Beard Grooming</h3>
+          <p>Neat trims and carefully shaped beards.</p>
+        </div>
+        <span class="service-arrow">↗</span>
+      </div>
+
+      <div class="service-item">
+        <span class="number">03</span>
+        <div>
+          <h3>Traditional Shave</h3>
+          <p>A classic grooming experience and clean finish.</p>
+        </div>
+        <span class="service-arrow">↗</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement">
+  <div class="container">
+    <span>NO SHORTCUTS. JUST GOOD BARBERING.</span>
+    <h2>Look sharp.<br>Feel good.</h2>
+    <p>Your local barber shop in Walworth, London.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+
+    <div class="gallery-heading">
+      <div>
+        <span class="section-number">03 / THE DETAILS</span>
+        <h2>THE<br>CRAFT.</h2>
+      </div>
+
+      <p>
+        A closer look at barbering, style and the details
+        that make a difference.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+      <img
+        src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1100&q=90"
+        alt="Barber cutting hair"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=90"
+        alt="Barber tools"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=90"
+        alt="Barber shop haircut"
+      >
+    </div>
+
+    <p class="gallery-note">
+      Illustrative photography — not official photographs of the shop.
+    </p>
+
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="container values-grid">
+
+    <div class="value-item">
+      <span>01</span>
+      <h3>Good service</h3>
+      <p>
+        A friendly, straightforward experience from the moment you walk in.
+      </p>
+    </div>
+
+    <div class="value-item">
+      <span>02</span>
+      <h3>Attention to detail</h3>
+      <p>
+        Taking the time to get the details right makes all the difference.
+      </p>
+    </div>
+
+    <div class="value-item">
+      <span>03</span>
+      <h3>Local roots</h3>
+      <p>
+        A familiar face and a local place in the heart of Walworth.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="container visit-grid">
+
+    <div class="visit-copy">
+      <span class="section-number">04 / COME THROUGH</span>
+
+      <h2>
+        FIND<br>
+        <span>YOUR</span><br>
+        BARBER.
+      </h2>
+
+      <p>
+        Find Kam's Barber Shop on East Street, Walworth.
+        For enquiries, contact the shop directly.
+      </p>
+
+      <div class="contact-list">
+
+        <div class="contact-row">
+          <div class="contact-icon">⌖</div>
+          <div>
+            <strong>ADDRESS</strong>
+            <p>356 East Street, Walworth,<br>London SE17 2SX</p>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-icon">☎</div>
+          <div>
+            <strong>PHONE</strong>
+            <a href="tel:+442072527125">020 7252 7125</a>
+          </div>
+        </div>
+
+      </div>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=356+East+Street+Walworth+London+SE17+2SX"
+        target="_blank"
+        rel="noopener"
+        class="btn"
+      >
+        Get directions ↗
+      </a>
+    </div>
+
+    <div class="map-card">
+      <a
+        class="map-link"
+        href="https://www.google.com/maps/search/?api=1&query=356+East+Street+Walworth+London+SE17+2SX"
+        target="_blank"
+        rel="noopener"
+      >
+        <strong>KAM'S BARBER SHOP</strong>
+        <span>OPEN IN GOOGLE MAPS ↗</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <h2>KAM'S BARBER SHOP.</h2>
+        <p>Good cuts. Real style. Walworth, London.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Find us</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Kam's Barber Shop — Concept design by Hewerone Studio.</p>
+      <p>Unofficial portfolio concept · Details subject to confirmation.</p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('active');
+  menuToggle.setAttribute('aria-expanded', isOpen);
+  menuToggle.textContent = isOpen ? '×' : '☰';
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.textContent = '☰';
+  });
+});
+</script>
+
+</body>
+</html>
